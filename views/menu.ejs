@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=  %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1><% foods %></h1>
+    </div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/mens">Men's Clothing</a>
+      <a href="/womens">Women's Clothing</a>
+    </nav>
+    
+    <h2 class="center">Featured Items</h2>
+    <div class="section">
+      
+     <% for(let i=0; i < menu.length; i++){ %>
+        <p><%= menu[i]%></p>
+    <% } %>
+
+      <div class="item-card">
+        <img src="<% imageUrl %>" />
+        <h3>...</h3>
+        <p>$...</p>
+        <a href="...">More info</a>
+      </div>
+
+    </div>
+  </body>
+</html>
