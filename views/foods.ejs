@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/all" class="nav-link">All Recipes</a>
+    </nav>
+
+    
+    <div class="container">
+        <div class="recipe-details">
+            <img src="https://example.com/lasagna.jpg" alt="Classic Lasagna">
+            <h1><%=name%></h1>
+            <p class="description"><%foods[i].description %></p>
+            <div class="info">
+                <h2>Ingredients</h2>
+                <p><%=ingredients%></p>
+                
+                <h2>Measurements</h2>
+                <p><%=measurements></p>
+                
+                <h2>Time in Oven</h2>
+                <p><%=timeInOven%></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

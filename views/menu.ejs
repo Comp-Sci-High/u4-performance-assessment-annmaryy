@@ -1,36 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=  %></title>
-    <link rel="stylesheet" href="/style.css">
-  </head>
-  <body>
-    <div class="header">
-      <h1><% foods %></h1>
-    </div>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
     <nav>
-      <a href="/">Home</a>
-      <a href="/mens">Men's Clothing</a>
-      <a href="/womens">Women's Clothing</a>
+        <div class="nav-container">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/all" class="nav-link active">All Recipes</a>
+        </div>
     </nav>
-    
-    <h2 class="center">Featured Items</h2>
-    <div class="section">
-      
-     <% for(let i=0; i < menu.length; i++){ %>
-        <p><%= menu[i]%></p>
-    <% } %>
 
-      <div class="item-card">
-        <img src="<% imageUrl %>" />
-        <h3>...</h3>
-        <p>$...</p>
-        <a href="...">More info</a>
-      </div>
-
+    <div class="container">
+        <h1>All Recipes</h1>
+        <div class="recipes-grid">
+            <div class="recipe-card">
+              <%for(let i=0; i < foods.length; i++){ %> 
+                <div class="recipe-info">
+                   <img src="<%=foods[i].imageUrl%>" alt="<% foods[i].name%>">
+                   <h2><%=foods[i].name%></h2>
+                    <p><%=foods[i].description%></p>
+                    <a href="/dish/:id" class="view-btn">View Recipe</a>
+                </div>
+              <% } %>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
+
+
+      
